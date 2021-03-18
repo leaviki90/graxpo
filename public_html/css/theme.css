@@ -1,0 +1,462 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 8, 2020, 2:28:20 PM
+    Author     : frontend
+*/
+
+
+html{
+    font-size: 16px; /* 1rem*/
+}
+body {
+    color: #81868E;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    position: relative;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #333B46;
+}
+
+img{
+    max-width: 100%;
+}
+
+.image-placeholder{
+    position: relative;
+    overflow: hidden;
+}
+.image-placeholder:after{
+    content: '';
+    display: block;
+    padding-top: 56.62%;
+}
+.image-placeholder img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.size-1by1:after{
+    padding-top: 100%;
+}
+
+.size-4by3:after{
+    padding-top: 75%;
+}
+
+.section-title {
+    font-size: 20px;
+    line-height: 30px;
+   
+
+}
+.section-title:after {
+    content: '';
+    display: block;
+    width: 46px;
+    height: 3px;
+    background-color: #898989;
+   
+}
+.text-center .section-title:after {
+    margin: 0 auto;
+}
+main > section {
+    margin-bottom: 100px;
+}
+
+/***HEADER****/
+
+header {
+    transition: 0.5s linear;
+}
+header.active {
+   background-color: #ccc;
+   padding-top: 0px !important;
+   padding-bottom: 0px !important; 
+   box-shadow: 0 0 3px #3E3F3F;
+}
+header .navbar-toggler {
+    border: none;
+}
+header .navbar-toggler span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #E84C3D;
+    margin-bottom: 5px;
+}
+header .navbar-toggler span:last-of-type {
+    margin-bottom: 0;
+}
+ #main-menu .navbar-nav .nav-link {
+    text-align: center;
+    color: #333B46;
+    background-color: #FFF;
+    text-transform: uppercase;
+    border-bottom: 1px solid #E84C3D;
+    transition: all 0.3s linear;
+}
+ #main-menu .navbar-nav .nav-link.active, 
+ #main-menu .navbar-nav .nav-link:hover {
+     background-color: #E84C3D;
+     color: #fff;
+ }
+ 
+ /***HOME***/
+ 
+ .home {
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+ }
+ .home .to-about {
+     position: absolute;
+     bottom: 54px;
+     left: 50%;
+     transform: translateX(-50%);   
+     text-decoration: none;
+     
+ }
+ .home .to-about .fas {
+     color: #3E3F3F;
+     font-size: 3rem;
+
+ }
+ .home .to-about .fas + span {
+     font-size: 12;
+     line-height: 20px;
+     color: #E84C3D;
+     text-transform: uppercase;
+ }
+ 
+ /******ABOUT*******/
+ .about {
+     margin-bottom: 128px;
+ }
+ .about .section-title {
+     margin-bottom: 39px;
+ }
+ .about .btn-graxpo {
+     color: #FFF;
+     background-color: #E84C3D;
+     padding: 10px;
+     text-transform: uppercase;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 300;
+ }
+ 
+ /****SERVICE****/
+
+ .service {
+     margin-bottom: 99px;
+ }
+ .service .section-header p {
+     max-width: 540px;
+     margin: 0 auto;
+ }
+ .service .service-item {
+   border: 3px solid #EBEBEB;
+   border-radius: 5px;
+   padding: 30px 30px 52px 34px;
+   transition: 0.2s linear;
+   cursor: pointer;
+  
+ }
+ .service .service-item:hover {
+     background-color: #E84C3D;
+     color: #FFF;
+     border: 3px solid #E84C3D;
+ }
+ .service .service-item:hover .service-item-icon span {
+     color: #E84C3D;
+     background-color: #FFF;
+ }
+ 
+ .service .service-item .service-item-icon span{
+     width: 108px;
+     height: 108px;
+     border-radius: 50%;
+     line-height: 108px;
+     font-size: 45px;
+     background-color: #E84C3D;
+     color: #FFF;
+     text-align: center;
+    
+ }
+ .service .service-item:hover .section-title {
+     color: #FFF;
+ }
+ .service .service-item:hover .section-title:after {
+     background-color: #FFF;
+ }
+ 
+ /*****PORTFOLIO***/
+ 
+ .portfolio {
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     padding: 137px 0 115px;
+     margin-bottom: 0;
+ }
+ .portfolio .section-title {
+     color: #FFF;
+ }
+ .portfolio .section-title:after {
+     background-color: #FFF;
+ }
+ 
+ /*****TEAM*****/
+ 
+ .team {
+     background-color: #ECECEC;
+     padding: 101px 0 80px;
+     margin-bottom: 0;
+ }
+ .team .team-item {
+     padding-right: 28px;
+ }
+ .team .team-item:last-of-type {
+     padding-right: 28px;
+ }
+ .team .hover {
+    bottom: 11px;
+    left: 11px;
+    right: 11px;
+    background-color: #E84C3D;
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 35px 20px 20px;
+    display: none;
+ }
+ .team .hover span {
+     width: 29px;
+     height: 29px;
+     line-height: 29px;
+     border-radius: 50%;
+     border: 1px solid #FFFFFF;
+     font-size: 14px;
+     
+ }
+ .team .hover span:first-of-type {
+     margin-right: 10px;
+ }
+ .team .hover a {
+     color: #FFFFFF;
+ }
+ .team .team-item-image:hover .hover {
+     display: block;
+     transform: scale(0.9);
+ }
+ .team .team-item h3 {
+     font-size: 17px;
+     line-height: 35px;
+     margin-bottom: 0;
+     
+ }
+ .team .team-item h3 + p {
+     font-size: 12px;
+     line-height: 16px;
+ }
+ 
+ /*****BLOG*******/
+ 
+ .blog {
+     padding: 104px 0 86px;
+     margin-bottom: 0;
+ }
+ .blog h2.section-title {
+     font-size: 18px;
+     line-height: 25px;
+     
+ }
+ .blog h2.section-title:after {
+     background-color: white;
+ }
+ .blog p {
+     font-size: 13px;
+     line-height: 25px;
+ }
+ .blog .form-control {
+     background-color: transparent;
+ }
+ .blog .form-control::placeholder {
+     color: white;
+     font-size: 13px;
+     opacity: 0.6;
+ }
+ .blog button {
+     font-size: 14px;
+ }
+ 
+ 
+ /****CONTACT****/
+ .contact {
+     padding: 136px 0 168px;
+     margin-bottom: 0;
+ }
+ .contact .form-control::placeholder {
+     opacity: 0.5;
+ }
+ .contact button {
+     background-color: #E84C3D;
+     color: white;
+     padding: 17px 84px 20px;
+     font-size: 14px;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 400px;
+     
+ }
+ .contact span:first-of-type{
+     line-height: 40px;
+     height: 40px;
+     width: 40px;
+     font-size: 20px;
+     color: #E84C3D;
+     text-align: center;
+ }
+ .contact span:last-of-type {
+     font-size: 14px;
+     color: #E84C3D;
+     
+ }
+
+ .contact a {
+     text-decoration: none;
+     display: blok;
+ }
+ 
+ /***FOOTER****/
+ footer {
+     padding: 33px 0 35px;
+     font-size: 15px;
+     line-height: 21px;
+     background-color: #E84C3D;
+     color: white;
+ }
+ 
+ /***CSS ANIMACIJE***/
+
+
+.animation{
+    opacity: 0;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+@keyframes slideLeft {
+    0%{
+        opacity:0;
+        transform:translateX(50%);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+.slideLeft{
+    animation-name: slideLeft;
+    animation-duration: 1s;
+}
+
+
+@keyframes slideRight {
+    0%{
+        opacity:0;
+        transform:translateX(-50%);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+.slideRight{
+    animation-name: slideRight;
+    animation-duration: 1s;
+}
+
+@keyframes slideUp {
+    0%{
+        opacity:0;
+        transform:translateY(50%);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.slideUp{
+    animation-name: slideUp;
+    animation-duration: 1s;
+}
+
+@keyframes slideDown {
+    0%{
+        opacity:0;
+        transform:translateY(-50%);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+.slideDown{
+    animation-name: slideDown;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+/*animacije ends*/
+
+.blog .is-invalid .invalid-feedback {
+    display: block;
+}
+.blog .blog-form .invalid-feedback *{
+    color: #fff;
+}
+.blog .form-group {
+    position: relative;
+}
+.blog .invalid-feedback {
+    position: absolute;
+    top: 100%;
+}
