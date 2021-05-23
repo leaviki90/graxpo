@@ -1,0 +1,94 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 8, 2020, 2:28:30 PM
+    Author     : frontend
+*/
+
+
+/*
+
+> 0        ''      NO NAME
+
+> 576px    SM    Small Devices
+
+> 768px    MD    Medium Devices
+
+> 992      LG    Large Devices
+
+> 1200     XL    Extra Large
+
+> 1400     XXL   Extra Extra Large
+
+*/
+
+@media(min-width:576px){
+  /****SERVICE****/
+  .service .service-item .section-title:after {
+      margin-left: 0;
+  }
+  /***TEAM**/
+  .team .team-item-image:hover .hover {
+      transform: none;
+  }
+}
+
+@media(min-width:768px){
+ 
+    /******HEADER*****/ 
+    #main-menu .navbar-nav .nav-link {
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s linear;
+        background-color: transparent;
+    }
+    #main-menu .navbar-nav .nav-link.active, 
+    #main-menu .navbar-nav .nav-link:hover {
+        background-color: transparent;
+        color: #E84C3D;
+        border-bottom: 2px solid #E84C3D;
+    }
+  
+    /******SERVICE*****/
+     .service .service-item .service-item-icon span{
+     width: 70px;
+     height: 70px;
+     line-height: 70px;
+     font-size: 2.5rem;
+    
+ }
+ .service .service-item {
+     padding: 15px;
+ }
+}
+
+@media(min-width:992px){
+  /****HEADER****/
+  #main-menu .navbar-nav .nav-link {
+      padding-right: 1rem;
+      padding-left: 1rem;
+  }
+}
+
+@media(min-width:1200px){
+  /****SERVICE***/
+  
+  .service .service-item {
+       padding: 30px 30px 52px 34px;
+  }
+  .service .service-item .service-item-icon span{
+     width: 108px;
+     height: 108px;
+     line-height: 108px;
+     font-size: 45px; 
+ }
+ 
+ 
+}
+
+@media(min-width:1400px){
+  
+  
+}
